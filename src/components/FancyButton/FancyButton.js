@@ -5,7 +5,7 @@ class FancyButton extends Component{
     render(){
         return (
             <div>
-                <button className={styles.button}>
+                <button onClick={this.props.onClick} className={styles.button}>
                     {this.props.label}
                 </button>
             </div>

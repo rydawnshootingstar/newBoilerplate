@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import styles from "./styles/main.scss";
 import AppRouter from "./routers/AppRouter";
+import createStore from "./store/ConfigureStore";
+import { Provider } from "react-redux";
 
+const store = createStore();
 class App extends Component {
 	render() {
 		return (
-			<div>
+			<Provider store={store}>
 				<AppRouter />
-			</div>
+			</Provider>
 		);
 	}
 }

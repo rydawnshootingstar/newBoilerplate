@@ -4,6 +4,7 @@
 + ## babel 
 + ## scss (with modules)
 + ## react router dom
++ ## redux (with thunk)
 
 # Scripts
 > ### npm run build
