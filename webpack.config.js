@@ -5,6 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SRC_DIR = __dirname + "/src";
 const DIST_DIR = __dirname + "/dist";
 
+const devMode = process.env.NODE_ENV !== 'production';
+
 module.exports = {
 	entry: [SRC_DIR + "/index.js"],
 	output: {
@@ -39,8 +41,8 @@ module.exports = {
 						options: {
 							modules: true,
 							sourceMap: true,
-							importLoaders: 1,
-							localIdentName: "[local]___[hash:base64:5]"
+							importLoaders: 1//,
+							//localIdentName: "[local]___[hash:base64:5]"
 						}
 					},
 					"sass-loader"
